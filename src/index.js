@@ -16,6 +16,12 @@ Object.keys(window).forEach(key => {
     }
 });
 
+// window.onload=()=>{
+//     console.log('windows hack onload')
+// }
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
