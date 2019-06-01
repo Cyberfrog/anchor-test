@@ -12,10 +12,17 @@ Object.keys(window).forEach(key => {
     if (/^on/.test(key) && !isMouseRelatedEvent(key)) {
         window.addEventListener(key.replace('on',''), event => {
             console.log('window event',key,event);
-        });
+        }, true);
     }
 });
-
+document.body.addEventListener(
+    'load',
+    function(event){
+        console.log('body on load', event)
+        
+    },
+    true // <-- useCapture
+)
 // window.onload=()=>{
 //     console.log('windows hack onload')
 // }
